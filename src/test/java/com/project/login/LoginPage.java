@@ -9,6 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage extends BasePage implements en{
+
     Common common = PageFactory.initElements(driver,Common.class);
 
     public LoginPage(){

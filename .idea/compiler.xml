@@ -9,5 +9,8 @@
         <module name="LearningGit" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="LearningGit" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
