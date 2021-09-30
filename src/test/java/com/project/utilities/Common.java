@@ -43,11 +43,11 @@ public class Common extends BasePage implements en{
 
         try {
 
-            menuItem.click();
+//            menuItem.click();
             Thread.sleep(2000);
             Actions action = new Actions(driver);
             WebElement mapSearchTextBox = driver.findElement(By.xpath("//div[@class='layout-actions']//input[@placeholder='Search Maps']"));
-            action.moveToElement(searchTextBox).perform();
+//            action.moveToElement(searchTextBox).perform();
 
 
         } catch (Exception e) {

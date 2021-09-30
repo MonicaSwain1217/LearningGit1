@@ -23,13 +23,6 @@ public class Hooks extends BasePage implements en {
         public void tearDown() throws Throwable {
 
             driver.quit();
-            tempMapName_1 = "";
-            tempMapName_2 = "";
-            tempPlanName_1 = "";
-            tempPlanName_2 = "";
-            setTempTotalCards(0);
-            tempTotalCards = 0;
-            currentMapCards.clear();
 
             System.out.println("Closed the browser");
             Thread.sleep(6000);
@@ -46,7 +39,7 @@ public class Hooks extends BasePage implements en {
         @Given("^I navigated to site$")
         public void I_navigated_to_site() throws Throwable {
 
-            driver.get(baseURL);
+            driver.get(driver.getCurrentUrl());
         }
             @And("^I wait 3 secs$")
             public void I_wait_3_secs () throws Throwable {

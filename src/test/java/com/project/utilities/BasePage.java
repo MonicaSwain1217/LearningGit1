@@ -8,6 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Reporter;
 
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -72,35 +73,36 @@ public class BasePage {
 
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
-        driver.manage().timeouts().pageLoadTimeout(TestUtils.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
-        driver.manage().timeouts().implicitlyWait(TestUtils.IMPLICIT_WAIT, TimeUnit.SECONDS);
+//        driver.manage().timeouts().pageLoadTimeout(TestUtils.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
+//        driver.manage().timeouts().implicitlyWait(TestUtils.IMPLICIT_WAIT, TimeUnit.SECONDS);
 
-        if (_environment.equals("DEV")) {
-
-            baseURL = properties.getProperty("devURL");
-            _username = properties.getProperty("DEVUsername");
-            _password = properties.getProperty("DEVPassword");
-        } else if (_environment.equals("QA")) {
-
-            baseURL = properties.getProperty("qaURL");
-            _username = properties.getProperty("QAUsername");
-            _password = properties.getProperty("QAPassword");
-        } else if (_environment.equals("DEMO")) {
-
-            baseURL = properties.getProperty("demoURL");
-            _username = properties.getProperty("DEMOUsername");
-            _password = properties.getProperty("DEMOPassword");
-        } else {
-            _environment = defaultEnv;
-        }
-
-        accountPageURL = baseURL + "/accounts";
-        opportunitiesPageURL = baseURL + "/opportunities";
-        reportingPageURL = baseURL + "/reporting";
-        setUpPageURL = baseURL + "/setup";
-        profileManagementURL = baseURL + "/setup/profiles";
-        toolProfilesPageURL = baseURL + "/setup/profiles/tool";
-
+//        if (_environment.equals("DEV")) {
+//
+//            baseURL = properties.getProperty("devURL");
+//            _username = properties.getProperty("DEVUsername");
+//            _password = properties.getProperty("DEVPassword");
+//        } else if (_environment.equals("QA")) {
+//
+//            baseURL = properties.getProperty("qaURL");
+//            _username = properties.getProperty("QAUsername");
+//            _password = properties.getProperty("QAPassword");
+//        } else if (_environment.equals("DEMO")) {
+//
+//            baseURL = properties.getProperty("demoURL");
+//            _username = properties.getProperty("DEMOUsername");
+//            _password = properties.getProperty("DEMOPassword");
+//        } else {
+//            _environment = defaultEnv;
+//        }
+//
+//        accountPageURL = baseURL + "/accounts";
+//        opportunitiesPageURL = baseURL + "/opportunities";
+//        reportingPageURL = baseURL + "/reporting";
+//        setUpPageURL = baseURL + "/setup";
+//        profileManagementURL = baseURL + "/setup/profiles";
+//        toolProfilesPageURL = baseURL + "/setup/profiles/tool";
+//
+//
     }
 
     public static String randomString() {
